@@ -1,4 +1,14 @@
 ---
+- name: creation du dossier result
+  hosts: local
+  become: true
+  tasks:
+    - name: creation dossier results
+      file:
+        path: results
+        state: directory
+        mode: '0755'
+############# PARTIE DNS PAR EXEMPLE #####################
 - name: comparaison de facts DNS avec referentiel 
   hosts: local
   gather_facts: True
@@ -13,6 +23,7 @@
       shell: 
         cmd: diff results/result_dns.yml referentiels/referentiel_dns.yml
 
+############# PARTIE NTP PAR EXEMPLE #####################
 - name: comparaison de facts NTP avec referentiel
   hosts: local
   gather_facts: True
