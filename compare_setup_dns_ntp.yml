@@ -1,0 +1,28 @@
+---
+- name: comparaison de facts DNS avec referentiel 
+  hosts: local
+  gather_facts: True
+  become: True
+  tasks:
+    - name: creation du fichier de resultats
+      template:
+        src: templates/result_dns.yml.j2
+        dest: results/result_dns.yml
+
+    - name: comparaison des fichiers
+      shell: 
+        cmd: diff results/result_dns.yml referentiels/referentiel_dns.yml
+
+- name: comparaison de facts NTP avec referentiel
+  hosts: local
+  gather_facts: True
+  become: True
+  tasks:
+    - name: creation du fichier de resultats
+      template:
+        src: templates/result_ntp.yml.j2
+        dest: results/result_ntp.yml
+
+    - name: comparaison des fichiers
+      shell:
+        cmd: diff results/result_ntp.yml referentiels/referentiel_ntp.yml
