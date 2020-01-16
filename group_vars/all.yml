@@ -1,0 +1,4 @@
+---
+ansible_connection: ssh
+ansible_user: GROUPEMENT-U\\adm-ldrai
+ansible_ssh_pass: El0dijtm78!!

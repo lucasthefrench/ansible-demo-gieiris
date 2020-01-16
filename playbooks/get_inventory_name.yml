@@ -1,0 +1,8 @@
+---
+- name: get inventory name
+  hosts: local
+  become: yes
+  tasks:
+    - name: get inventory name
+      debug:
+        msg: "{{ inventory_file }}"

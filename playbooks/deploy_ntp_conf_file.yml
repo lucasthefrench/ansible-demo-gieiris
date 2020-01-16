@@ -1,8 +1,8 @@
 ---
 - name: deploiement fichier ntp.conf
-  hosts: local
+  hosts: ntp
   gather_facts: yes
-  become: yes
+  #become: yes
   vars_files:
     - ../vars.yml
   tasks:
