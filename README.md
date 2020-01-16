@@ -9,3 +9,4 @@ Il manque:
 
 Commandes execution:
 - ansible-playbook -i inventories/inventory_prod playbooks/deploy_ntp_conf_file.yml -e "inv='r'" --diff
+- ansible-playbook -i inventories/inventory_prod playbooks/compare_setup_dns_ntp.yml
