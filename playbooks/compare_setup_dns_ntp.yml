@@ -5,7 +5,7 @@
   tasks:
     - name: creation dossier results
       file:
-        path: results
+        path: ../results
         state: directory
         mode: '0755'
 ############# PARTIE DNS PAR EXEMPLE #####################
@@ -16,12 +16,12 @@
   tasks:
     - name: creation du fichier de resultats
       template:
-        src: templates/result_dns.yml.j2
-        dest: results/result_dns.yml
+        src: ../templates/result_dns.yml.j2
+        dest: ../results/result_dns.yml
 
     - name: comparaison des fichiers
       shell: 
-        cmd: diff results/result_dns.yml referentiels/referentiel_dns.yml
+        cmd: diff ../results/result_dns.yml ../referentiels/referentiel_dns.yml
 
 ############# PARTIE NTP PAR EXEMPLE #####################
 - name: comparaison de facts NTP avec referentiel
@@ -31,9 +31,9 @@
   tasks:
     - name: creation du fichier de resultats
       template:
-        src: templates/result_ntp.yml.j2
-        dest: results/result_ntp.yml
+        src: ../templates/result_ntp.yml.j2
+        dest: ../results/result_ntp.yml
 
     - name: comparaison des fichiers
       shell:
-        cmd: diff results/result_ntp.yml referentiels/referentiel_ntp.yml
+        cmd: diff ../results/result_ntp.yml ../referentiels/referentiel_ntp.yml

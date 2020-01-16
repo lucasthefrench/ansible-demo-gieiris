@@ -6,3 +6,6 @@
 Il manque:
 - renseigner des machines dans l'inventaire
 - on récupère qu'un seul fact d'un seul serveur donc à adapter à plusieurs facts de plusieurs serveurs
+
+Commandes execution:
+- ansible-playbook -i inventories/inventory_prod playbooks/deploy_ntp_conf_file.yml -e "inv='r'" --diff

@@ -1,0 +1,4 @@
+---
+serveurs_ntp:
+  - "{% if inv=='p' %}srvntp1{% elif inv=='r' %}rsrvntp1{% elif inv=='d' %}dsrvntp1{% endif %}"
+  - "{% if inv=='p' %}srvntp2{% elif inv=='r' %}rsrvntp2{% elif inv=='d' %}dsrvntp2{% endif %}"

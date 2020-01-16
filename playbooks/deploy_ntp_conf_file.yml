@@ -1,0 +1,12 @@
+---
+- name: deploiement fichier ntp.conf
+  hosts: local
+  gather_facts: yes
+  become: yes
+  vars_files:
+    - ../vars.yml
+  tasks:
+    - name: envoi du fichier ntp.conf
+      template:
+        src: ../templates/ntp.conf.j2
+        dest: /etc/ntp.conf.fake
