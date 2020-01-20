@@ -1,6 +1,6 @@
 ---
 - name: deploiement fichier ntp.conf
-  hosts: ntp
+  hosts: all
   gather_facts: yes
   #become: yes
   vars_files:
